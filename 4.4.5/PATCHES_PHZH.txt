@@ -1,0 +1,59 @@
+All patches have a comment that starts with // PHZH: [...]
+
+
+Login-Patch für AD/Evento-Fallback
+MMP-Cookie setzen
+----------------------------------
+- Services\Init
+  -> classes\class.ilInitialisation.php
+
+  
+Ordner in Kategorien ermöglichen
+--------------------------------
+- Modules\Folder
+  -> module.xml : Linie "<parent id="cat">cat</parent>" hinzufügen
+  
+
+Bugfix: Grosse Icons im Header in Lernmodulen (REPORTED)
+--------------------------------------------------------
+- Modules\LearningModule
+  -> classes\class.ilLMPresentationGUI.php
+  -> classes\class.ilObjContentObject.php
+
+
+E-Mail-Adresse in Umfragen ausgeben
+-----------------------------------	  
+- Modules\Survey
+  -> classes\class.ilObjSurvey.php
+  -> classes\class.ilSurveyEvaluationGUI.php
+  
+
+Excel-Export von Einzelfragen in Tests
+--------------------------------------
+- Modules\Test
+  -> classes\class.ilQuestionExport.php
+  -> classes\class.ilTestEvaluationGUI.php
+  -> classes\tables\class.ilResultsByQuestionTableGUI
+
+- Modules\TestQuestionPool
+  -> classes\class.assQuestion.php
+  -> classes\class.assClozeTest.php
+  -> classes\class.assMatchingQuestion.php
+  -> classes\class.assOrderingQuestion.php
+  -> classes\class.assErrorText.php
+  -> classes\class.assMultipleChoice.php
+  -> classes\class.assSingleChoice.php
+  -> classes\class.assFileUpload.php
+  -> classes\class.assTextQuestion.php
+  -> classes\class.assImagemapQuestion.php
+  -> classes\class.assTextSubset.php
+  -> classes\class.assOrderingHorizontal.php
+  -> classes\class.assNumeric.php
+
+  
+Einbinden von MMP-Dateien in Content
+Min. Breite von Audio-Dateien
+Vorschauen in Videos
+------------------------------------
+- Services\COPage
+  -> xsl\page.xsl
