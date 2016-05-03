@@ -38,8 +38,10 @@
 		{
 			fwrite($fh," --> in ILIAS gefunden - Passwort in ILIAS wird aktualisiert\n");
 
-			// der benutzer wurde gefunden, passwort vom AD in die ILIAS DB schreiben
-			$query_upd_pwd = "UPDATE usr_data SET passwd='".md5($password)."' WHERE login='".$email."'";
+			//Update Password, Name and Givenname on every password-change
+			$query_upd_pwd = "UPDATE usr_data SET passwd='".md5($password)."', firstname='".$myAuth->GetGivenName()."', lastname='".$myAuth->GetName()."' WHERE login='".$email."'";
+			// OLD: der benutzer wurde gefunden, passwort vom AD in die ILIAS DB schreiben
+			//$query_upd_pwd = "UPDATE usr_data SET passwd='".md5($password)."' WHERE login='".$email."'";
 			$ilias->db->query($query_upd_pwd);
 			$ilAuth->start();
 		        ilUtil::redirect("index.php");
