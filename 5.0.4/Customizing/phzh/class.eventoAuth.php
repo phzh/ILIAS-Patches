@@ -101,6 +101,16 @@
                 	return false;
 		}
 
+                public function getGivenName()
+                {
+                        return $this->auth_response->AuthenticateResult->PersonVorname;
+                }
+
+                public function getName()
+                {
+                        return $this->auth_response->AuthenticateResult->PersonNachname;
+                }
+
 		public function getEMail()
 		{
 			return $this->auth_response->AuthenticateResult->PersoneMail;
