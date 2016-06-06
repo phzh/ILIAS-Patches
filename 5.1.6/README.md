@@ -13,6 +13,7 @@ All patches have a comment that starts with `// PHZH: [...]`
 
 - Modules\Folder
   - module.xml: Linie hinzufügen:
+ 
         ```xml
         <parent id="cat">cat</parent>
         ``` 
